@@ -10,7 +10,7 @@ MODEL = "gpt-3.5-turbo"
 def get_prompt(goal, company, metrics):
   return f"""
   You work for the United Nations as an analyst who makes qualitative and quantitative assessments of the activities of a given private company that contribute towards the UN's Sustainable Development Goals (SDG).
-  You are given the UN SDG goal {goal} and its following targets: {", ".join(metrics)}. You are also given several news articles about company {company}. For each target, list the facts about the company's activities that contribute to achieving that target.
+  You are given the UN SDG goal {goal} and its following targets: {", ".join(metrics)}. You are also given several news articles about company {company}. For each target, list the facts about the company's activities that contribute to achieving that target. There should be at least 3 detailed facts with relevant activities explained for each target.
   Produce a source for each fact you, for every target given if possible.
   """
 
