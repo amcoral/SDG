@@ -40,7 +40,8 @@ with form_placeholder.container():
       st.markdown(f" ##### The SDG you selected is: `{sdg}`")
       with st.spinner('Processing, please wait...'):
         st.session_state.got_data = run(select_goals_mapping[st.session_state.sdg], st.session_state.company)
-      form_placeholder.empty()
+    form_placeholder.empty()
+    with form_placeholder.container():
       st.markdown(f" ##### The company you've entered is: `{company}`")
       st.markdown(f" ##### The SDG you selected is: `{sdg}`")
       st.write(f"{st.session_state.got_data}")
