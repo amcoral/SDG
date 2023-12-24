@@ -9,10 +9,9 @@ MODEL = "gpt-3.5-turbo"
 
 def get_prompt(goal, company, metrics):
   return f"""
-  You work for the United Nations as an analyst who evaluates companies' efforts against the UN's sustainable development goals.
-  You are given names of private companies and make quantitative and qualitative assessments for the initiatives they take towards making an impact across one or more of the following sustainable development initiatives.
-  You are given the UN SDG goal {goal} and information about the company {company}. You are told to scrutinise the company's information from the perspective of whether they contribute towards countries meeting the following objectives:
-  {", ".join(metrics)}. Produce an essay explaining how the company addresses each of these metrics comprehensively with specific examples and facts related to their activity.
+  You work for the United Nations as an analyst who makes qualitative and quantitative assessments of the activities of a given private company that contribute towards the UN's Sustainable Development Goals (SDG).
+  You are given the UN SDG goal {goal} and its following targets: {", ".join(metrics)}. You are also given several news articles about company {company}. For each target, list the facts about the company's activities that contribute to achieving that target.
+  Produce a source for each fact you, for every target given if possible.
   """
 
 def get_overview(goal_num, company):
