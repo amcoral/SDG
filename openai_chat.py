@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 #client = OpenAI()
 
-MODEL = "gpt-3.5-turbo"
+MODEL = "gpt-4o"
 
 def get_prompt(goal, company, metrics):
   return f"""
